@@ -1,0 +1,128 @@
+.section {
+  display: flex;
+  background-color: #0d1013;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-content {
+  background-color: lightgrey;
+  width: 60%;
+  height: 80vh;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  height: 8vh;
+
+  img {
+    margin-left: 20px;
+    width: 38px;
+  }
+
+  h2 {
+    margin-left: 20px;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  width: 95%;
+  height: 9vh;
+  margin: 10px auto;
+  border-radius: 5px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 28px;
+    padding: 20px 30px 5px 30px;
+  }
+}
+
+.midle-container {
+  width: 100%;
+  height: 48vh;
+
+  .first-container {
+    display: flex;
+
+    .first-container-content {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 20px;
+    }
+  }
+
+  .second-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 20px;
+
+    .grid-content {
+      grid-column: 1 / 4;
+      width: 87%;
+
+      .second-container-content {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+      }
+    }
+
+    .img-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #000;
+      margin: 10px 30px;
+      padding: 20px;
+
+      img {
+        width: 360px;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+
+      label {
+        text-align: center;
+        font-size: 22px;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+table, th, td {
+  border:1px solid black;
+  margin: 0 auto;
+}
+
+.td-title{
+  width: 360px;
+}
+
+.td-value {
+  width: 80px;
+}
+
+.td-date {
+  width: 80px;
+}
+
+

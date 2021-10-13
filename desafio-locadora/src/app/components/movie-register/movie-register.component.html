@@ -1,0 +1,123 @@
+<section class="section">
+  <div class="main-content">
+    <header class="header">
+      <img src="../../../assets/icons/film.png">
+      <h2>Filmes</h2>
+    </header>
+    <main>
+      <div class="logo">
+        <div class="container">
+          <img src="../../../assets/icons/new.png">
+          <p>Novo</p>
+        </div>
+        <div class="container">
+          <img src="../../../assets/icons/folder.png">
+          <p>Abrir</p>
+        </div>
+        <div class="container">
+          <img src="../../../assets/icons/save.png">
+          <p>Salvar</p>
+        </div>
+        <div class="container">
+          <img src="../../../assets/icons/remove.png">
+          <p>Excluir</p>
+        </div>
+        <div class="container">
+          <img src="../../../assets/icons/cross.png">
+          <p>Cancelar</p>
+        </div>
+        <div class="container">
+          <img src="../../../assets/icons/printer.png">
+          <p>Imprimir</p>
+        </div>
+        <div class="container">
+          <img src="../../../assets/icons/power-button.png">
+          <p>Fechar</p>
+        </div>
+      </div>
+      <div class="midle-container">
+        <div class="first-container">
+          <div class="first-container-content">
+            <label>Número do Filme</label>
+            <input type="text" value="00000035">
+          </div>
+          <div class="first-container-content">
+            <label>Tipo Produto</label>
+            <select>
+              <option value="VHS" selected>VHS</option>
+            </select>
+          </div>
+          <div class="first-container-content">
+            <label>Tipo de Filme</label>
+            <select>
+              <option value="24 HORAS" selected>24 HORAS</option>
+              <option value="12 HORAS">12 HORAS</option>
+            </select>
+          </div>
+          <div class="first-container-content">
+            <label>Gênero</label>
+            <select>
+              <option value="AÇÃO" selected>AÇÃO</option>
+              <option value="AVENTURA">AVENTURA</option>
+            </select>
+          </div>
+        </div>
+        <div class="second-container">
+          <div class="grid-content">
+            <div class="second-container-content">
+              <label>Título do Filme</label>
+              <input type="text" value="+ VELOZES + FURIOSOS">
+            </div>
+            <div class="second-container-content">
+              <label>Principais Atores</label>
+              <input type="text" value="PAUL WALKER, TYRESE, EVA MENDES">
+            </div>
+            <div class="second-container-content">
+              <label>Principais Diretores</label>
+              <input type="text" value="JOHN SINGLETON">
+            </div>
+            <div class="second-container-content">
+              <label>Fornecedor</label>
+              <input type="text" value="NOVA ERA VIDEO">
+            </div>
+            <div class="second-container-content">
+              <label>Tipo de Idioma</label>
+              <input type="text">
+            </div>
+            <div class="second-container-content">
+              <label>Valor da Locação</label>
+              <input type="text" value="R$: 2.50">
+            </div>
+            <div class="second-container-content">
+              <label>Data Cadastro</label>
+              <input type="text" value="06/02/2004">
+            </div>
+          </div>
+          <div class="img-content">
+            <h3>Foto de capa do Filme</h3>
+            <img [src]="image">
+            <label style="text-align: center" class="label-image-perfil" for="image">Selecione a capa do arquivo</label>
+            <input hidden type="file" name="image" id="image" placeholder="Insira a imagem"
+              (change)="getFile($event)" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <table>
+        <tr>
+          <th>Número do Filme</th>
+          <th>Título do Filme</th>
+          <th>Valor</th>
+          <th>Data Cad</th>
+        </tr>
+        <tr *ngFor="let movies of moviesList">
+          <td>{{movies?.numero}}</td>
+          <td class="td-title">{{movies?.titulo}}</td>
+          <td class="td-value">{{movies?.valor}}</td>
+          <td class="td-date">{{movies?.data}}</td>
+        </tr>
+      </table>
+    </footer>
+  </div>
+</section>
